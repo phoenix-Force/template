@@ -1,7 +1,7 @@
 <template>
     <b-container fluid >
         <b-row class="h-100">
-            <b-col cols="1" class="d-flex flex-column custcolor">
+            <b-col cols="1" class="d-flex flex-column justify-content-between custcolor">
                 <div class="align-self-start align-self-center">
                     <div class="d-flex align-self-center">
                         <b-button class="btn bdr" ><i class="fas fa-braille"></i></b-button>
@@ -22,7 +22,7 @@
                         </div>
                     
                 </div>
-                <div class="align-self-end align-self-center"  style="margin-right:10%;">
+                <div class="align-items-end align-self-center"  style="margin-right:10%;">
                     
                         <b-button class="btn bdr"><i class="fas fa-sign-out-alt"></i></b-button> 
                     
@@ -53,8 +53,8 @@ export default {
 </script>
 <style scoped>
 .custcolor{
-    background-color: #2C3B7A;
-    height:100%;
+    background-color:#343C6D;
+    height:100vh;
     color:white;
 }
 .bdr{
