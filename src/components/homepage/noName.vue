@@ -1,5 +1,5 @@
 <template>
-    <appex-chart style="color:white;"  width="1100" height="500" type="radialBar" :options="chartOptions" :series="series"></appex-chart>
+    <appex-chart type=radialBar height=170 :options="chartOptions" :series="series"></appex-chart>
     
 </template>
 <script>
@@ -10,18 +10,62 @@ export default {
     },
     data(){
         return{
-            series: [70],
-            chartOptions: {
+
+
+            series: [75],
+        chartOptions: {
+            chart: {
+                toolbar: {
+                show: true
+                }
+            },
             plotOptions: {
                 radialBar: {
+                    startAngle: -135,
+                    endAngle: 225,
                     hollow: {
-                        size: '80%',
+                        margin: 0,
+                        size: '70%',
+                        background: '#fff',
+                        position: 'front',
+                        dropShadow: {
+                        enabled: true,
+                        top: 3,
+                        left: 0,
+                        blur: 4,
+                        opacity: 0.24
+                        }
+                    },
+                    track: {
+                        background: '#fff',
+                        strokeWidth: '67%',
+                        margin: 0, // margin is in pixels
+                        dropShadow: {
+                        enabled: true,
+                        top: -3,
+                        left: 0,
+                        blur: 4,
+                        opacity: 0.35
+                        }
+                    },
+
+                    dataLabels: {
+                        name: {
+                        offsetY: -10,
+                        show: true,
+                        color: '#888',
+                        fontSize: '17px'
+                        },
+                        value: {
+                        formatter: function (val) {
+                            return parseInt(val);
+                        },
+                        color: '#111',
+                        fontSize: '36px',
+                        show: true,
+                        }
                     }
-                },
-                
-                
-            },
-            labels: ['Cricket']
+                }
             },
             fill: {
                 type: 'gradient',
@@ -34,10 +78,21 @@ export default {
                 opacityFrom: 1,
                 opacityTo: 1,
                 stops: [0, 100]
+                }
             },
+            stroke: {
+                lineCap: 'round'
+            },
+            labels: ['Percent'],
+        }
+
+
+
+
+
+
         }
     }
-}
 }
 </script>
 <style scoped>

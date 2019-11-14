@@ -93,6 +93,13 @@ export default {
             chartOptions: {
                 chart: {
                 id: 'vuechart-example',
+                toolbar: {
+                    show: false,
+                    tools: {
+                        selection: false,
+                        reset: true
+                    }
+                }
                 },
                 fontFamily: 'Helvetica, Arial, sans-serif',
                 dataLabels: {
@@ -106,18 +113,28 @@ export default {
                 yaxis:{
                     title: {
                         text: 'Earning'
+                    },
+                    labels: {
+                        style: {
+                            color: '#7f86c9'
+                        }
                     }
                 },
                 xaxis: {
                     categories: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],
                     title: {
                         text: 'Year'
+                    },
+                    labels: {
+                        style: {
+                            colors: '#ffffff'
+                        }
                     }
                 },
                 colors:['#7f86c9'],
                 // foreColor: '#FFFFFF',
                 grid: {
-                borderColor: '#ffffff',
+                borderColor: 'black',
                     // row: {
                     // colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
                     // opacity: 0.5

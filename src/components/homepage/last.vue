@@ -6,7 +6,7 @@
                     <h4 >Views By Browser</h4>
                 </div>
                 <div class="align-self-end">
-                    <i style="margin-left:2%;margin-top:2%;" class="fas fa-ellipsis-v bdr"></i>
+                    <b-button class="dd"><i style="margin-left:2%;margin-top:2%;" class="fas fa-ellipsis-v bdr"></i></b-button>
                 </div>
             </b-row>
             <b-row>
@@ -17,43 +17,46 @@
                     <h4 >Views By Browser</h4>
                 </div>
                 <div class="align-self-end">
-                    <i style="margin-left:2%;margin-top:2%;" class="fas fa-ellipsis-v bdr"></i>
+                    <b-button class="dd"><i style="margin-left:2%;margin-top:2%;" class="fas fa-ellipsis-v bdr"></i></b-button>
                 </div>
             </b-row>
             <b-row class="lstsh d-flex flex-row justify-content-between" >
-                <div class="mm" style="margin-top:10px;;margin-left:10px;">
+                <div class="mm" style="margin-top:15px;;margin-left:10px;">
                     <h6>Online Visitors</h6>
                 </div>
                 <div class="mm">
-                    
-                </div>
-                <div class="mm">
-                <h6>nvsj</h6>
-                    <h4>6554</h4>
-                </div>
-            </b-row>
-            <b-row class="lstsh d-flex flex-row justify-content-between" >
-                <div class="mm" style="margin-top:10px;;margin-left:10px;">
-                    <h6>Online Visitors</h6>
-                </div>
-                <div class="mm">
-                    
-                </div>
-                <div class="mm">
-                <h6>nvsj</h6>
-                    <h4>6554</h4>
-                </div>
-            </b-row>
-            <b-row class="lstsh d-flex flex-row justify-content-between" >
-                <div class="mm" style="margin-top:10px;;margin-left:10px;">
-                    <h6>Online Visitors</h6>
-                </div>
-                <div class="mm">
+
+
                     <!-- <no-name></no-name> -->
+
                 </div>
                 <div class="mm">
                 <h6>Total</h6>
-                    <h4>6554</h4>
+                    <h4>8125</h4>
+                </div>
+            </b-row>
+            <b-row class="lstsh d-flex flex-row justify-content-between" >
+                <div class="mm" style="margin-top:15px;;margin-left:10px;">
+                    <h6>New Visitors</h6>
+                </div>
+                <div class="mm">
+
+
+
+
+
+                </div>
+                <div class="mm">
+                <h6>Total</h6>
+                    <h4>7694</h4>
+                </div>
+            </b-row>
+            <b-row class="lstsh d-flex flex-row justify-content-between" style="padding-top:30px;" >
+                <div class="mm">
+                    <h6>Avarage revenue</h6>
+                </div>
+                <div class="mm">
+                    <h3 style="font-weight:bold;">{{reveneu}}<span style="font-size: 15px;font-weight: normal;margin-left: 10px;padding-bottom: 2px;color: azure;background-color: rgb(107, 117, 203);margin-right: 10%;">{{x}}%</span></h3>
                 </div>
             </b-row>
         </b-col>
@@ -72,16 +75,24 @@ export default {
     },
     data(){
         return{
+            reveneu:65574,
+            x:30,
             series: [{
-                name: 'Series 1',
                 data: [80, 50, 30, 40, 100, 20],
             }],
             chartOptions: {
+                chart: {
+                    id: 'vuechart-example',
+                    toolbar: {
+                        show: false,
+                        tools: {
+                            selection: false,
+                            reset: true
+                        }
+                    }
+                },
                 labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-                    title: {
-                        text: 'Daily basis'
-                    },
-                    colors:['#7f86c9'],
+                    colors:['#ffffff'],
                     toolbar: {
                         show: false,
                     }
@@ -101,10 +112,19 @@ h4{
 .lstsh{
     border-radius: 20px;
     padding:10px;
-    height: 100px;
+    height: 120px;
     margin-top:20px;
     background-color: #333c77;
     margin-top:10%;
+}
+.dd{
+    height: 32px;
+    width: 10px;
+    padding-left: 6px;
+    padding-top: 4px;
+    background-color: #363e71;
+    border-radius: 5px;
+    border-style: none;
 }
 
 </style>
