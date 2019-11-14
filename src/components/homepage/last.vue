@@ -111,9 +111,9 @@ h4{
 }
 .lstsh{
     border-radius: 20px;
-    padding:10px;
+    padding:5px;
     height: 120px;
-    margin-top:20px;
+    margin-top:5px;
     background-color: #333c77;
     margin-top:10%;
 }
