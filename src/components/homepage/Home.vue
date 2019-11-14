@@ -1,12 +1,12 @@
 <template>
 <b-container fluid class="custcolor">
     <b-row class="custcolor">
-        <b-col md="8">
-            <b-row style="height:250px; color:white;" class="custcolor">
+        <b-col md="8" xl="8" lg="8" sm="10" cols="12">
+            <b-row style="height:auto; color:white;" class="custcolor">
                 <b-col md="3"  >
                     <b-container class="clr">
                         <b-row style="height:40%">
-                            <b-col md-24>
+                            <b-col md-12>
                                 <h1>{{stockPrice}}</h1>
                                 <h6>total visitors</h6>
                             </b-col>
@@ -19,7 +19,7 @@
                 <b-col md="3" >
                     <b-container class="clr">
                         <b-row style="height:40%">
-                            <b-col md-24>
+                            <b-col md-12>
                                 <h1>{{stockPrice}}</h1>
                                 <h6>total visitors</h6>
                             </b-col>
@@ -60,11 +60,11 @@
                 </b-col>
             </b-row>
             <b-row>
-            <b-col md-24>
+            <b-col md-12>
                 <apex-chart style="color:white;"  height="500" type="area" :options="chartOptions" :series="series"></apex-chart>
             </b-col>
             </b-row>
-            <b-row data-spy="scroll">
+            <b-row data-spy="scroll" class="ll">
                 <show-compt :key="index" v-for="(x,index) in 3"></show-compt>
             </b-row>
         </b-col>
@@ -186,7 +186,11 @@ h6{
     padding-left: 7%;
     color: rgb(193, 201, 207);
 }
-
+/* .ll{
+    width:100%;
+    height:300px;
+    overflow-y:hidden;
+} */
 </style>
 
 

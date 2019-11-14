@@ -1,5 +1,5 @@
 <template>
-    <b-col md="3" class="comcon">
+    <b-col  cols="11" sm="11" lg="3" xl="3" md="3" class="comcon">
         <b-row style="height:7vh;padding-top:5%;">
                 <b-col md-2>
                     <b-img src="https://picsum.photos/300/150/?image=41" class="logoImage" alt="Logo"></b-img>
@@ -44,7 +44,8 @@ h6{
 .comcon{
     border-radius: 20px;
     background-color:#292D5A;
-    margin-left:5%;
+    
+    margin:2%;
     /* float:left; */
     /* margin-left:px; */
     /* #343D74 */
