@@ -64,7 +64,7 @@
                 <apex-chart style="color:white;"  height="500" type="area" :options="chartOptions" :series="series"></apex-chart>
             </b-col>
             </b-row>
-            <b-row data-spy="scroll" class="ll">
+            <b-row class="ll">
                 <show-compt :key="index" v-for="(x,index) in 3"></show-compt>
             </b-row>
         </b-col>
@@ -173,6 +173,7 @@ export default {
     background-color: 	rgb(47, 54, 97);
     color:white;
     border-radius: 0px 0px 20px 20px;
+    margin-bottom: 10px;
     
 }
 .clr:hover{
@@ -186,11 +187,12 @@ h6{
     padding-left: 7%;
     color: rgb(193, 201, 207);
 }
-/* .ll{
+.ll{
     width:100%;
-    height:300px;
-    overflow-y:hidden;
-} */
+    /* height:300px; */
+    overflow-x: auto;
+    float:left;
+}
 </style>
 
 

@@ -1,7 +1,7 @@
 <template>
     <b-container fluid >
         <b-row class="h-100">
-            <b-col cols="1" class="d-flex flex-column justify-content-between custcolor">
+            <b-col cols="1" class="d-flex flex-column justify-content-between custcolor zz">
                 <div class="align-self-start align-self-center">
                     <div class="d-flex align-self-center">
                         <b-button class="btn bdr" ><i class="fas fa-braille"></i></b-button>
@@ -71,7 +71,12 @@ export default {
     -webkit-box-shadow: 0px 0px 37px 7px rgba(255,255,255,0.72); 
 box-shadow: 0px 0px 37px 7px rgba(255,255,255,0.72);
 }
-
+/* 
+@media screen and (max-width:768px) {
+.zz{
+    display: none;
+}
+} */
 
 
 </style>
